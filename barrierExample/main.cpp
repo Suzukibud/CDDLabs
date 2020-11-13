@@ -48,12 +48,12 @@ void updateTask(std::shared_ptr<Semaphore> aMutexSem, std::shared_ptr<Semaphore>
         aMutexSem->Signal();
     }
     aMutexSem->Signal();
-    //barrier here --all task numbers printed before any A's
-    //if everyone else is here then we all go
-    //if not we wait!!
-
-    //BARRIER CODE END
-
+    /*!
+        barrier here --all task numbers printed before any A's
+        if everyone else is here then we all go
+        if not we wait!!
+        BARRIER CODE END
+    */
     std::cout << "A" << std::endl;
 }
 
