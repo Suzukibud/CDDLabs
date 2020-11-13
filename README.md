@@ -7,8 +7,11 @@ Author: Damien Doran
 Description: This is the first lab in a series of labs introducing concurrency using Semaphores!
 
 Lab 1: Introducing Threads
+
 Lab 2: Introducing Semaphores
+
 Lab 3: Rendezvous
+
 Lab 4: Mutual Exclusion
 
 
