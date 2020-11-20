@@ -1,0 +1,44 @@
+\hypertarget{main_8cpp}{}\doxysection{main.\+cpp File Reference}
+\label{main_8cpp}\index{main.cpp@{main.cpp}}
+{\ttfamily \#include \char`\"{}Semaphore.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$thread$>$}\newline
+{\ttfamily \#include $<$chrono$>$}\newline
+Include dependency graph for main.\+cpp\+:
+% FIG 0
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{main_8cpp_a9141e3eb0b1274e58b053fd8a60a94e3}{task\+One}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classSemaphore}{Semaphore}} $>$ first\+Sem, std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classSemaphore}{Semaphore}} $>$ second\+Sem, int delay)
+\item 
+void \mbox{\hyperlink{main_8cpp_ac7cb6b39082835c7e3c853c42af9ecdc}{task\+Two}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classSemaphore}{Semaphore}} $>$ first\+Sem, std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classSemaphore}{Semaphore}} $>$ second\+Sem, int delay)
+\item 
+int \mbox{\hyperlink{main_8cpp_a840291bc02cba5474a4cb46a9b9566fe}{main}} (void)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{main_8cpp_a840291bc02cba5474a4cb46a9b9566fe}\label{main_8cpp_a840291bc02cba5474a4cb46a9b9566fe}} 
+\index{main.cpp@{main.cpp}!main@{main}}
+\index{main@{main}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+$<$ Launch the threads ~\newline
+\mbox{\Hypertarget{main_8cpp_a9141e3eb0b1274e58b053fd8a60a94e3}\label{main_8cpp_a9141e3eb0b1274e58b053fd8a60a94e3}} 
+\index{main.cpp@{main.cpp}!taskOne@{taskOne}}
+\index{taskOne@{taskOne}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{taskOne()}{taskOne()}}
+{\footnotesize\ttfamily void task\+One (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classSemaphore}{Semaphore}} $>$}]{first\+Sem,  }\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classSemaphore}{Semaphore}} $>$}]{second\+Sem,  }\item[{int}]{delay }\end{DoxyParamCaption})}
+
+displays a message that is split in to 2 sections to show how a rendezvous works
+
+task\+One method will print out the stages of the thread Task\+One first\+Sem signals when the thread has arrived so that other threads that were waiting can continue $<$ This is the rendezvous point!!\mbox{\Hypertarget{main_8cpp_ac7cb6b39082835c7e3c853c42af9ecdc}\label{main_8cpp_ac7cb6b39082835c7e3c853c42af9ecdc}} 
+\index{main.cpp@{main.cpp}!taskTwo@{taskTwo}}
+\index{taskTwo@{taskTwo}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{taskTwo()}{taskTwo()}}
+{\footnotesize\ttfamily void task\+Two (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classSemaphore}{Semaphore}} $>$}]{first\+Sem,  }\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classSemaphore}{Semaphore}} $>$}]{second\+Sem,  }\item[{int}]{delay }\end{DoxyParamCaption})}
+
+displays a message that is split in to 2 sections to show how a rendezvous works
+
+In the task\+Two method first\+Sem calls the wait method to let other threads know it needs to complete its task before the other threads can continue $<$ This is the rendezvous point!!

@@ -46,6 +46,57 @@
 // Code:
 #include "Semaphore.h"
 #include "Barrier.h"
+#include <iostream>
+
+/*!
+    this method will destroy the barrier when finished so there is no memory wasted
+    */
+Barrier::~Barrier()
+{
+}
+/*!
+    Phase one, the mutex lock was initialised with 1 so when wait is called by the first thread
+    it can be locked, the value is incremented, compared. if not correct number of threads entered
+    the turnstile allows another thread in next to continue same process
+    */
+void Barrier::phaseOne()
+{
+    theLock.Wait();
+    ++threadCount;
+    if( threadCount == threadTotal)
+    {
+        std::cout << std::endl;
+        turnstileTwo.Wait();
+        turnstileOne.Signal();
+    }
+    theLock.Signal();
+    turnstileOne.Wait();
+    turnstileOne.Signal();
+}
+
+void Barrier::phaseTwo()
+{
+    theLock.Wait();
+    --threadCount;
+    if(threadCount == 0)
+    {
+        turnstileOne.Wait();
+        turnstileTwo.Signal();
+    }
+    if(threadCount < 0)
+    {
+        std::cout << std::endl;
+    }
+    theLock.Signal();
+    turnstileTwo.Wait();
+    turnstileTwo.Signal();
+}
+
+void Barrier::wait()
+{
+    phaseOne();
+    phaseTwo();
+}
 
 
 // 

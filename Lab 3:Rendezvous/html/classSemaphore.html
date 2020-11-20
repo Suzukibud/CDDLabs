@@ -79,23 +79,58 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a0d9290d316636875ca85d1d78950a817"><td class="memItemLeft" align="right" valign="top"><a id="a0d9290d316636875ca85d1d78950a817"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>Semaphore</b> (unsigned int uiCount=0)</td></tr>
 <tr class="separator:a0d9290d316636875ca85d1d78950a817"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a72aabebf026e3a8b1f3e4d0fa8ee1eda"><td class="memItemLeft" align="right" valign="top"><a id="a72aabebf026e3a8b1f3e4d0fa8ee1eda"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>Wait</b> ()</td></tr>
+<tr class="memitem:a72aabebf026e3a8b1f3e4d0fa8ee1eda"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSemaphore.html#a72aabebf026e3a8b1f3e4d0fa8ee1eda">Wait</a> ()</td></tr>
 <tr class="separator:a72aabebf026e3a8b1f3e4d0fa8ee1eda"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7f700173ae86ae623684109066e07656"><td class="memTemplParams" colspan="2"><a id="a7f700173ae86ae623684109066e07656"></a>
 template&lt;typename R , typename P &gt; </td></tr>
 <tr class="memitem:a7f700173ae86ae623684109066e07656"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><b>Wait</b> (const std::chrono::duration&lt; R, P &gt; &amp;crRelTime)</td></tr>
 <tr class="separator:a7f700173ae86ae623684109066e07656"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a86f92f738b4486439b296d8e235895f2"><td class="memItemLeft" align="right" valign="top"><a id="a86f92f738b4486439b296d8e235895f2"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>Signal</b> ()</td></tr>
+<tr class="memitem:a86f92f738b4486439b296d8e235895f2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSemaphore.html#a86f92f738b4486439b296d8e235895f2">Signal</a> ()</td></tr>
 <tr class="separator:a86f92f738b4486439b296d8e235895f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>A <a class="el" href="classSemaphore.html" title="A Semaphore Implementation.">Semaphore</a> Implementation. </p>
 <p>Uses C++11 features such as mutex and condition variables to implement <a class="el" href="classSemaphore.html" title="A Semaphore Implementation.">Semaphore</a> </p>
-</div><hr/>The documentation for this class was generated from the following files:<ul>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="a86f92f738b4486439b296d8e235895f2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a86f92f738b4486439b296d8e235895f2">&#9670;&nbsp;</a></span>Signal()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Semaphore::Signal </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>The <a class="el" href="classSemaphore.html" title="A Semaphore Implementation.">Semaphore</a> Signal function increments (s). if (s) &lt;= 0, then the next blocked process/thread in the queue is dequeued and becomes unblocked </p>
+
+</div>
+</div>
+<a id="a72aabebf026e3a8b1f3e4d0fa8ee1eda"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a72aabebf026e3a8b1f3e4d0fa8ee1eda">&#9670;&nbsp;</a></span>Wait()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Semaphore::Wait </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>The <a class="el" href="classSemaphore.html" title="A Semaphore Implementation.">Semaphore</a> wait function is used to decrement the <a class="el" href="classSemaphore.html" title="A Semaphore Implementation.">Semaphore</a> integer (s). if (s) is now negative the current process is blocked and placed in a q. </p>
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following files:<ul>
 <li><a class="el" href="Semaphore_8h_source.html">Semaphore.h</a></li>
-<li>Semaphore.cpp</li>
+<li><a class="el" href="Semaphore_8cpp.html">Semaphore.cpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
