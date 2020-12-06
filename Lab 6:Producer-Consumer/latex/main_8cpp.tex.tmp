@@ -1,0 +1,35 @@
+\hypertarget{main_8cpp}{}\doxysection{main.\+cpp File Reference}
+\label{main_8cpp}\index{main.cpp@{main.cpp}}
+{\ttfamily \#include \char`\"{}Safe\+Buffer.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Semaphore.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Event.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$thread$>$}\newline
+{\ttfamily \#include $<$unistd.\+h$>$}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+Include dependency graph for main.\+cpp\+:
+% FIG 0
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{main_8cpp_ae90ac47e15f943088838f183fc5113da}\label{main_8cpp_ae90ac47e15f943088838f183fc5113da}} 
+void {\bfseries producer} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classSafeBuffer}{Safe\+Buffer}} $>$ queue, std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classSemaphore}{Semaphore}} $>$ mutex, std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classSemaphore}{Semaphore}} $>$ consumer, std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classSemaphore}{Semaphore}} $>$ space)
+\item 
+\mbox{\Hypertarget{main_8cpp_a317b0c73f075efde2675e60a84ae8677}\label{main_8cpp_a317b0c73f075efde2675e60a84ae8677}} 
+void {\bfseries consumer} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classSafeBuffer}{Safe\+Buffer}} $>$ queue, std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classSemaphore}{Semaphore}} $>$ mutex, std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classSemaphore}{Semaphore}} $>$ consumer, std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classSemaphore}{Semaphore}} $>$ space)
+\item 
+\mbox{\Hypertarget{main_8cpp_a24cc0d00d5f38314d245cdbc9f7a1623}\label{main_8cpp_a24cc0d00d5f38314d245cdbc9f7a1623}} 
+void {\bfseries testing\+Queue} (\mbox{\hyperlink{classSafeBuffer}{Safe\+Buffer}} queue)
+\item 
+\mbox{\Hypertarget{main_8cpp_a840291bc02cba5474a4cb46a9b9566fe}\label{main_8cpp_a840291bc02cba5474a4cb46a9b9566fe}} 
+int {\bfseries main} (void)
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{main_8cpp_aab938108caad0d0e47d6885b5ba2d23a}\label{main_8cpp_aab938108caad0d0e47d6885b5ba2d23a}} 
+const int {\bfseries size} =20
+\item 
+\mbox{\Hypertarget{main_8cpp_a86cf672daa4e0ad11ad10efc894d19c8}\label{main_8cpp_a86cf672daa4e0ad11ad10efc894d19c8}} 
+int {\bfseries num} = 0
+\end{DoxyCompactItemize}

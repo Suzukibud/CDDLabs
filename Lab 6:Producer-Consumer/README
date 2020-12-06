@@ -1,10 +1,19 @@
-The README file is a text file that explains what a project is.
-It should contain information on
+This work is licensed under the Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-sa/4.0/.
 
-1. Project Licence
-2. Authors of Project
-3. How to install project
-4. List of any required Libraries, platform issues, etc.
-5. TO DO section listing items that need to be completed (errors, missing features etc.)
-6. List of files and what they contain
-7. Any other relevent information
+Title: Lab Six: Producer Consumer
+
+Author: Damien Doran
+
+Description: This is the sixth lab in a series of labs introducing concurrency using Semaphores!
+
+In this lab we will demonstrate how the producer consumer problem can be solved
+
+Dependencies:
+gcc version 7.5.0 or greater
+Make
+
+Install:
+run "make ALL" in directory with code
+
+Usage:
+type "a.out" to run

@@ -2,31 +2,9 @@
  * 
  * Filename: SafeBuffer.h
  * Description: 
- * Author: Joseph
- * Maintainer: 
- * Created: Tue Jan  8 12:30:23 2019 (+0000)
- * Version: 
- * Package-Requires: ()
- * Last-Updated: Tue Jan  8 12:30:25 2019 (+0000)
- *           By: Joseph
- *     Update #: 1
- * URL: 
- * Doc URL: 
- * Keywords: 
- * Compatibility: 
- * 
+ * Author: Damien Doran
  */
 
-/* Commentary: 
- * 
- * 
- * 
- */
-
-/* Change Log:
- * 
- * 
- */
 
 /* This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -43,6 +21,34 @@
  */
 
 /* Code: */
+#include <array>
+
+class SafeBuffer
+{
+    /* Declaring Queues attributes */
+    int head;
+    int tail;
+    int size;
+    int arr[1000];
+
+    public: SafeBuffer()
+    {
+        head = 0;
+        tail = 0;
+        size = 1000;
+        arr[0] = 0;
+    }
+    /* Declaring queues methods */
+    ~SafeBuffer();
+    bool isEmpty();
+    bool isFull();
+    void enqueue(int val);
+    void dequeue();
+    void printQueue();
+    void frontQueue();
+    void backQueue();
+    void details();
+};
 
 
 
