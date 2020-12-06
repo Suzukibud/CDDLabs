@@ -14,6 +14,8 @@ Lab 3: Rendezvous
 
 Lab 4: Mutual Exclusion
 
+Lab 5: Reusable Barrier
+
 
 Dependencies:
 gcc version 7.5.0 or greater
